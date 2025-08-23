@@ -4,14 +4,15 @@ import java.sql.Date;
 
 public class Patients {
 	
+	
 	private String fullName;
 	private Date Birthday;
 	private String gender;
 	private String address;
 	private String phoneNumber;
 	private String email;
-	
 	private long idPatients;
+	
 	public long getIdPatients() {
 		return idPatients;
 	}
