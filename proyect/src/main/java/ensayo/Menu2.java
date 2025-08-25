@@ -1,28 +1,44 @@
 package ensayo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import ensayointerfaz.Resultado;
+import ensayo.RegistroPaciente;
+
 public class Menu2 {
-	public void mostrarMenu() {
-	    System.out.println("\n=== Datos adicionales ===");
-	    System.out.println("1. Datos vitales del paciente");
-	    System.out.println("2. Actualizar información");
-	    System.out.println("3. Salir");
-	    System.out.print("Elija una opción: ");
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        Resultado resultado = new Resultado();
+        
+        boolean salir = false;
 
-	    String opcion = sc.nextLine();
+        while (!salir) {
+            MostrarMenu();
+            int opcion = teclado.nextInt();
+            teclado.nextLine(); // limpiar buffer
 
-	    switch (opcion) {
-	        case "1":
-	            registrarPaciente();
-	            break;
-	        case "2":
-	            buscarPaciente();
-	            break;
-	        case "3":
-	            System.out.println("Saliendo del sistema...");
-	            return; // Termina el programa
-	        default:
-	            System.out.println("Opción inválida.");
-	            mostrarMenu(); // vuelve a mostrar menú
-	    }
-	}
+            switch (opcion) {
+            	case 1 -> resultado.registrarPacientes();
+                case 2 -> resultado.buscarPaciente();
+                case 3 -> {
+                    System.out.println("Saliendo del sistema...");
+                    salir = true;
+                }
+                default -> System.out.println("Opción no válida, intente nuevamente.");
+            }
+        }
+
+        teclado.close();
+    }
+
+    private static void MostrarMenu() {
+        System.out.println("\n*** Listado De Personas ***");
+        System.out.println("""
+                1. Registrar paciente
+                2. Buscar paciente
+                3. Salir
+                """);
+        System.out.print("Seleccione su opción: ");
+    }
 }
