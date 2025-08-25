@@ -54,9 +54,6 @@ public class Procedure {
 		this.item = item;
 	}
 
-
-	
-	
 	
 
 }

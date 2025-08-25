@@ -2,16 +2,16 @@ package app.domain.model;
 
 import java.sql.Date;
 
-public class Patients {
+public class Patients extends PersonClass{
 	
-	
+	private Long idPatients;	
 	private String fullName;
-	private Date Birthday;
+	private Date birthday;
 	private String gender;
 	private String address;
 	private String phoneNumber;
 	private String email;
-	private long idPatients;
+
 	
 	public long getIdPatients() {
 		return idPatients;
@@ -26,10 +26,10 @@ public class Patients {
 		this.fullName = fullName;
 	}
 	public Date getBirthday() {
-		return Birthday;
+		return birthday;
 	}
 	public void setBirthday(Date birthday) {
-		Birthday = birthday;
+		this.birthday = birthday;
 	}
 	public String getGender() {
 		return gender;
@@ -56,5 +56,5 @@ public class Patients {
 		this.email = email;
 	}
 
-	
-};
+}
+

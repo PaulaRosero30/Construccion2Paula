@@ -1,4 +1,4 @@
-package app;
+package app.domain.model;
 
 public class PersonClass 
 {
@@ -6,7 +6,9 @@ public class PersonClass
 	private String idType, idNumber, name, lastName, Gender, relationshipClinic, personCategory, personJobTitle, professionalLicenseNumber;
 	private String bloodType, birthDate, maritalStatus, personAddress, phoneNumber, email, username, securityKey;
 	private String emergencyContactFullName, relationshipPatient, emergencyPhoneNumber;
-	private String allergies, medicalConditions;
+	private String allergies, medicalConditions, insuranceCompany, policyNumber, policyEndDate, attendingDoctorName;
+	private String medications, procedures, diagnosticTests;
+	private boolean policyState;
 
 	public void showData()
 	{
@@ -33,6 +35,14 @@ public class PersonClass
 	    System.out.println("Teléfono de Emergencia: " + emergencyPhoneNumber + "\n");
 	    System.out.println("Alergias: " + allergies + "\n");
 	    System.out.println("Condiciones Médicas: " + medicalConditions + "\n");
+	    System.out.println("Compañía de Seguro: " + insuranceCompany + "\n");
+	    System.out.println("Número de Póliza: " + policyNumber  + "\n");
+	    System.out.println("Estado de Póliza: " + (policyState ? "Activa" : "Inactiva") + "\n");
+	    System.out.println("Vigencia de la Póliza: " + policyEndDate + "\n");
+	    System.out.println("Médico tratante: " + attendingDoctorName + "\n");
+        System.out.println("Medicamentos aplicados: " + medications + "\n");
+        System.out.println("Procedimientos realizados: " + procedures + "\n");
+        System.out.println("Exámenes diagnósticos: " + diagnosticTests + "\n");
 		
 	}
 	
@@ -147,6 +157,38 @@ public class PersonClass
 	{
 	    this.medicalConditions = medicalConditions;
 	}
+	
+    public void setInsuranceCompany(String insuranceCompany) {
+        this.insuranceCompany = insuranceCompany;
+    }
+
+    public void setPolicyNumber(String policyNumber) {
+        this.policyNumber = policyNumber;
+    }
+
+    public void setPolicyState(boolean policyState) {
+        this.policyState = policyState;
+    }
+
+    public void setPolicyEndDate(String policyEndDate) {
+        this.policyEndDate = policyEndDate;
+    }
+
+    public void setAttendingDoctorName(String attendingDoctorName) {
+        this.attendingDoctorName = attendingDoctorName;
+    }
+
+    public void setMedications(String medications) {
+        this.medications = medications;
+    }
+
+    public void setProcedures(String procedures) {
+        this.procedures = procedures;
+    }
+
+    public void setDiagnosticTests(String diagnosticTests) {
+        this.diagnosticTests = diagnosticTests;
+    }
 		
 	public String getIdType()
 	{
@@ -257,5 +299,37 @@ public class PersonClass
 	{
 	    return medicalConditions;
 	}
+	
+	public String getInsuranceCompany() {
+        return insuranceCompany;
+    }
+
+    public String getPolicyNumber() {
+        return policyNumber;
+    }
+
+    public boolean getPolicyState() {
+        return policyState;
+    }
+
+    public String getPolicyEndDate() {
+        return policyEndDate;
+    }
+
+    public String getAttendingDoctorName() {
+        return attendingDoctorName;
+    }
+
+    public String getMedications() {
+        return medications;
+    }
+
+    public String getProcedures() {
+        return procedures;
+    }
+
+    public String getDiagnosticTests() {
+        return diagnosticTests;
+    }
 	
 }
