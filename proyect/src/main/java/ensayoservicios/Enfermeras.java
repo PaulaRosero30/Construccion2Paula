@@ -25,4 +25,5 @@ public class  Enfermeras {
         return buscarPorId(idPaciente) != null;
     }
     
+    
 }

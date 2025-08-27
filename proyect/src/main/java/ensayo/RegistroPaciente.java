@@ -11,15 +11,7 @@ public class RegistroPaciente {
 	private static String correoElectronico;
 	
 	public void showData() {
-		System.out.println("Documento del paciente: " + idPaciente);
-		System.out.println("Ingrese el nombre completo del paciente: " +nombreCompleto);
-		System.out.println("Ingrese los apellidos del paciente: " +apellidos);
-		System.out.println("Ingrese la fecha de nacimiento del paciente: " +fechaNacimiento);
-		System.out.println("Ingrese genero del paciente 'Femenino, masculino': " +genero);
-		System.out.println("Ingrese la dirección del paciente: " +direccion);
-		System.out.println("Ingrese el número de telefono del paciente: " +numeroTelefono);
-		System.out.println("Ingrese el correo electronico del paciente: " +correoElectronico);
-
+		
 	}
 
 	public String getIdPaciente() {
@@ -27,7 +19,7 @@ public class RegistroPaciente {
 	}
 
 	public void setIdPaciente(String idPaciente) {
-		RegistroPaciente.idPaciente = idPaciente;
+		this.idPaciente = idPaciente;
 	}
 
 	public String getNombreCompleto() {

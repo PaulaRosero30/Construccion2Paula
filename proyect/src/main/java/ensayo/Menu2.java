@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import ensayointerfaz.Resultado;
-import ensayo.RegistroPaciente;
+import ensayo.RegistroSignosVitales;
 
 public class Menu2 {
     public static void main(String[] args) {
@@ -35,8 +35,8 @@ public class Menu2 {
     private static void MostrarMenu() {
         System.out.println("\n*** Listado De Personas ***");
         System.out.println("""
-                1. Registrar paciente
-                2. Buscar paciente
+                1. Registrar signos vitales
+                2. Actualizar información
                 3. Salir
                 """);
         System.out.print("Seleccione su opción: ");
