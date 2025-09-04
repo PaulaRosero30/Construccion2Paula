@@ -1,4 +1,4 @@
-package ensayo;
+package test;
 
 public class RegistroSignosVitales {
 	private static String presionArterial;
